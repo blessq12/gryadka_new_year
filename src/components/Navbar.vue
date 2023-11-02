@@ -7,10 +7,10 @@ export default{
 <template>
     <nav>
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center g-0">
                 <div class="col-6 col-lg-4">
                     <div class="nav-logo">
-                        <img :src="company.logo" :alt="company.name" class="img-fluio">
+                        <img :src="company.logo" :alt="company.name" class="img-fluid">
                     </div>
                 </div>
                 <div class="d-none col-lg-4 d-lg-flex justify-content-center">
@@ -51,15 +51,14 @@ nav
     box-shadow: $nav-shadow
     position: sticky
     top: 0
-    z-index: 1
+    z-index: 10
     .nav-logo
         display: flex
         line-height: 1
         align-items: center
         img
-            margin-right: 6px
-            height: 45px
             width: auto
+            max-height: 60px
     .nav-buttons
         list-style: none
         padding: 0
