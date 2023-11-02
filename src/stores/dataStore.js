@@ -1,4 +1,4 @@
-import { defineStore } from "pinia";
+import { defineStore,acceptHMRUpdate } from "pinia";
 
 export const useDataStore = defineStore( 'data' , {
   state:()=>({
@@ -22,5 +22,33 @@ export const useDataStore = defineStore( 'data' , {
     
   }),
   getters:{},
-  actions:{}
+  actions:{
+    sendMessage(data){
+      let token = '1773023736:AAFXTsMDUH-2HdiWfe5qHUfUFeyEtfejPmM',
+          recipient = '1815974380',
+          message = ''
+      message += "Запись на ёлку \n\n \r"
+      message += "Имя: " +data.formData.name + "\n \n \r "
+      message += "Телефон: " + data.formData.phone + "\n\n \r "
+      if (data.offer.offer !== null) {
+        message += "Офер: " + data.offer.offer + "\n \n  \r"
+        message += "Цена: " + data.offer.price + "\n\r "
+      }
+
+      fetch('https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + recipient + '&text=' + message )
+      .then(res => { 
+        if (res.ok){
+          console.log(res)
+          return true
+        } else {
+          return false
+        }
+       })
+      .catch( err => { console.log (err) } )
+    }
+  }
 })
+
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useDataStore, import.meta.hot))
+}

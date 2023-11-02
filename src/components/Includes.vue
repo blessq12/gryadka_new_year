@@ -1,5 +1,6 @@
 <script>
 export default{
+    emits:['popupToggle'],
     mounted(){
         this.tickerLeft()
         this.tickerRight()
@@ -72,9 +73,9 @@ export default{
                         <a :href=" 'tel:'+company.phone " class="btn btn-primary">
                             Забронировать место
                         </a>
-                        <a href="" class="btn btn-outline-primary mx-2">
+                        <button type="button" href="" class="btn btn-outline-primary mx-2" @click="$emit('popupToggle', { offer: null, price: 'details'})">
                             Узнать подробнее
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-6">
