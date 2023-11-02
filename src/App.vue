@@ -18,6 +18,12 @@ export default{
     Footer
   },
   mounted(){},
+  provide(){
+
+    return {
+      company: this.dataStore
+    }
+  },
   data:()=>({
     test: false
   }),

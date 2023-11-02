@@ -5,9 +5,37 @@
 :root
     --animate-duration: .3s
 
-$color-main: #2e2e2e
-$color-secondary: #dedede
+$color-main: #003884
+$color-secondary: #fecd1a
+$color-white: #fff
+$color-black: #2e2e2e
+$color-vk: #4c75a3
+$color-whatsapp: #128C7E
+$color-telegram: #0088cc
+$nav-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px
+$default-radius: 10px
 
+@font-face
+    font-family: 'Intro'
+    src: url('/font/intro.woff') format( woff )
+    src: url('/font/intro.woff2') format( woff2 )
+    font-weight: normal
+
+@font-face
+    font-family: 'Blogger'
+    src: url('/font/Blogger_Sans.woff') format( woff )
+    font-weight: normal
+
+@font-face
+    font-family: 'Blogger'
+    src: url('/font/Blogger_Sans-Bold.woff') format( woff )
+    font-weight: bold
 
 section
     padding: 24px 0
+
+.blogger
+    font-family: 'Blogger'
+    font-weight: normal
+    &.bold
+        font-weight: bold !important
