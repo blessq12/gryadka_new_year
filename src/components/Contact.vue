@@ -16,7 +16,7 @@ export default{
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-12 mb-5 mb-lg-0">
+            <div class="col-12 col-md-12 col-lg-6 mb-5 mb-lg-0">
                 <ul class="contact-list">
                     <li>
                         <a :href="company.map_link" target="_blank">
@@ -56,8 +56,8 @@ export default{
                     </li>
                 </ul>
             </div>
-            <div class="col-12 col-md-12">
-                <div class="map-wrap px-0 px-md-0 px-lg-5 text-center">
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="map-wrap px-0 px-md-0text-center">
                     <img src="/images/map.jpg" :alt="company.name" class="img-fluid rounded">
                 </div>
             </div>
@@ -73,6 +73,8 @@ export default{
     margin: 0
     li
         padding: 24px 12px
+        @media (min-width: 768px)
+            padding: 12px 6px
         border-bottom: 1px solid $color-main
         transition: all .3s
         &:first-child
@@ -84,6 +86,8 @@ export default{
         a
             color: $color-black
             font-size: 22px 
+            @media (min-width: 768px)
+                font-size: 16px
             text-decoration: none
             font-family: 'blogger'
             font-weight: bold
