@@ -40,6 +40,9 @@ export default{
                                         <li class="border-bottom blogger">
                                             участие в игровой программе
                                         </li>
+                                        <li class="border-bottom blogger">
+                                            новогодний мастер-класс
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="footer" @click="$emit('popupToggle', { offer: 1, price: 2490})">
@@ -112,12 +115,14 @@ export default{
     display: flex
     overflow: hidden
     overflow-x: scroll
+    @media (min-width: 1200px)
+        justify-content: center
     &::-webkit-scrollbar
         display: none
     li
         padding: 6px
-        @media (min-width: 768px)
-            width: 33.333%
+        @media (min-width: 1200px)
+            width: 33%
         &:first-child
             padding-left: 0
         &:last-child
@@ -139,6 +144,7 @@ export default{
                 padding: 24px 0
                 width: 100% !important
                 display: block
+                min-height: 360px
                 ul
                     list-style: none
                     padding: 0

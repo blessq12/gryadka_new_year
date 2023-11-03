@@ -8,6 +8,7 @@ import Navbar from './components/Navbar.vue'
 import HeroBanner from './components/HeroBanner.vue'
 import Includes from './components/Includes.vue'
 import Offer from './components/Offer.vue'
+import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 
 export default{
@@ -17,6 +18,7 @@ export default{
     HeroBanner,
     Includes,
     Offer,
+    Contact,
     Footer
   },
   mounted(){},
@@ -80,6 +82,7 @@ export default{
   <hero-banner></hero-banner>
   <includes @popupToggle="popupToggle"></includes>
   <offer @popupToggle="popupToggle"></offer>
+  <contact></contact>
   <Footer></Footer>
 </template>
 

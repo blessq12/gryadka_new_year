@@ -15,7 +15,7 @@ export default{
                     <div class="col-12 col-md-6">
                         <h5 class="intro mb-0">Новогодние елки вместе с</h5>
                         <img :src="company.logo" :alt="company.name" class="img-fluid">
-                        <p class="blogger">Купите билет заранее, чтобы попасть в школу магии и волшебства Деда Мороза!</p>
+                        <p class="blogger bold">Купите билет заранее, чтобы попасть в школу магии и волшебства Деда Мороза!</p>
                     </div>
                 </transition>
                 
@@ -39,6 +39,8 @@ export default{
     background-repeat: no-repeat !important
     overflow: hidden
     color: $color-white
+    p
+        font-size: 22px
     .overlay
         position: absolute
         top: 0
