@@ -74,7 +74,7 @@ export default{
     li
         padding: 24px 12px
         @media (min-width: 768px)
-            padding: 12px 6px
+            padding: 12px 12px
         border-bottom: 1px solid $color-main
         transition: all .3s
         &:first-child
